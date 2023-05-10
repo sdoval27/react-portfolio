@@ -1,5 +1,11 @@
 import React from 'react';
 
+const styles = {
+  contactStyle: {
+    background: "#489D7C",
+  }
+}
+
 export default function Portfolio() {
   return (
     <div>

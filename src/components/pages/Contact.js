@@ -1,9 +1,16 @@
 import React, { useState } from 'react';
+import '../../styles/Contact.css';
+
+const styles = {
+  contactStyle: {
+    background: "#489D7C",
+  },
+}
 
 export default function Contact() {
   const [email, setEmail] = useState('');
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
+  const [name, setName] = useState('');
+  const [message, setMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
   const validateEmail = (email) => {
@@ -19,10 +26,10 @@ export default function Contact() {
 
     if (inputType === 'email') {
       setEmail(inputValue);
-    } else if (inputType === 'firstName') {
-      setFirstName(inputValue);
+    } else if (inputType === 'name') {
+      setName(inputValue);
     } else {
-      setLastName(inputValue);
+      setMessage(inputValue);
     }
   };
 
@@ -35,31 +42,42 @@ export default function Contact() {
       // We want to exit out of this code block if something is wrong so that the user can correct it
       return;
     }
-    alert(`Thank you, ${firstName}`);
 
-    setFirstName('');
-    setLastName('');
+    if (name.trim() === ""){
+      setErrorMessage("Please include your name");
+      return;
+    }
+    else if (email.trim() === "") {
+      setErrorMessage("Please include your email");
+      return;
+    } 
+    else if (message.trim() === "") {
+      setErrorMessage("Please include your message");
+      return;
+    } 
+    else {
+      alert(`Thank you, ${name}`)
+      setErrorMessage('');
+    }
+
+    // alert(`Thank you, ${name}`);
+
+    setName('');
     setEmail('');
+    setMessage('');
 
   };
 
   return (
-    <div>
+    <div style={styles.contactStyle} className = "Contact">
       <h1>Contact Page</h1>
-      <form>
+      <form className="form">
       <input
-          value={firstName}
-          name="firstName"
+          value={name}
+          name="name"
           onChange={handleInputChange}
           type="text"
-          placeholder="first name"
-        />
-        <input
-          value={lastName}
-          name="lastName"
-          onChange={handleInputChange}
-          type="text"
-          placeholder="last name"
+          placeholder="name"
         />
         <input
           value={email}
@@ -67,6 +85,13 @@ export default function Contact() {
           onChange={handleInputChange}
           type="email"
           placeholder="email"
+        />
+        <input
+          value={message}
+          name="message"
+          onChange={handleInputChange}
+          type="text"
+          placeholder="message"
         />
         
         <button type="button" onClick={handleFormSubmit}>Submit</button>
