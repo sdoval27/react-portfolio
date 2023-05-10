@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 
 export default function Contact() {
   const [email, setEmail] = useState('');
-  const [userName, setUserName] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
   const validateEmail = (email) => {
@@ -18,8 +19,10 @@ export default function Contact() {
 
     if (inputType === 'email') {
       setEmail(inputValue);
+    } else if (inputType === 'firstName') {
+      setFirstName(inputValue);
     } else {
-      setUserName(inputValue);
+      setLastName(inputValue);
     }
   };
 
@@ -32,9 +35,10 @@ export default function Contact() {
       // We want to exit out of this code block if something is wrong so that the user can correct it
       return;
     }
-    alert(`Thank you, ${userName}`);
+    alert(`Thank you, ${firstName}`);
 
-    setUserName('');
+    setFirstName('');
+    setLastName('');
     setEmail('');
 
   };
@@ -43,6 +47,20 @@ export default function Contact() {
     <div>
       <h1>Contact Page</h1>
       <form>
+      <input
+          value={firstName}
+          name="firstName"
+          onChange={handleInputChange}
+          type="text"
+          placeholder="first name"
+        />
+        <input
+          value={lastName}
+          name="lastName"
+          onChange={handleInputChange}
+          type="text"
+          placeholder="last name"
+        />
         <input
           value={email}
           name="email"
@@ -50,13 +68,7 @@ export default function Contact() {
           type="email"
           placeholder="email"
         />
-        <input
-          value={userName}
-          name="userName"
-          onChange={handleInputChange}
-          type="text"
-          placeholder="username"
-        />
+        
         <button type="button" onClick={handleFormSubmit}>Submit</button>
       </form>
       {errorMessage && (
