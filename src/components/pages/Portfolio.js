@@ -1,5 +1,12 @@
 import React from 'react';
 
+import goodGreens from '../../images/good-greens-port.png';
+import spooky from '../../images/mansion.png';
+import password from '../../images/password_gen_plain.png';
+import pwa from '../../images/JATE-app.png';
+import workDay from '../../images/WDS-home.png';
+import readmeGen from '../../images/readme-gen.png';
+
 const styles = {
   contactStyle: {
     background: "#489D7C",
@@ -11,64 +18,61 @@ export default function Portfolio() {
     <div>
       <h1>Portfolio Page</h1>
 
-      <section class="work" id="work"> 
-        <figure class="spotlight">
+        <card class="spotlight">
          
-         <card>
+       
           <h2 class="card-title-1">Good Greens</h2>
-         <a href="https://shavanapuchta.github.io/good-greens-project-1/">
-         <img class= "spotlight-image" src="./assets/images/good-greens-port.png" alt="image of website for specialty restaurants"></img>
-         </a>
-         </card>
-        </figure>
+         {/* <a href="https://shavanapuchta.github.io/good-greens-project-1/"/> */}
+         <img src={goodGreens} alt="image of website for specialty restaurants"/>
+         
+         
+        </card>
 
         {/* project 2 */}
-        <figure class="card">
+        <card class="card">
           <h2 class="card-title">A Night at the Manor</h2>
-          <card>
-          <a href="http://spooky-dudes.herokuapp.com/">
-          <img class="port-images" src="./assets/images/mansion.png" alt="a cartoonish manor with a title that says A house with the comically bad yelp review"> </img>
-          </a>
-          </card>
-        </figure>
+          
+          {/* <a href="http://spooky-dudes.herokuapp.com/"/> */}
+          <img src={spooky} alt="a cartoonish manor with a title that says A house with the comically bad yelp review"/>
+          
+          
+        </card>
 
         {/* project 3 */}
-        <figure class="card">
+        <card class="card">
           <h2 class="card-title">Project</h2>
-          <card>
-          <a href="./assets/images/building.jpeg">
-          <img class="port-images" src="./assets/images/building.jpeg" alt="clocktower obscured by autumn trees"> </img>
-          </a>
-          </card>
-        </figure>
+          
+          <img  src={password} alt="password generator"/>
+        </card>
         
         {/* project 4 */}
-        <figure class="card">
+        <card class="card">
           <h2 class="card-title">Project</h2>
-          <card>
-          <a href="./assets/images/horses.jpeg">
-          <img class="port-images" src="./assets/images/horses.jpeg" alt="four horses grazing in a grass pasture with a tree"> </img>
-          </a>
-          </card>
-        </figure>
+        
+          
+          <img src={pwa} alt="Text Editing PWA"/> 
+        </card>
 
         {/* project 5*/}
-        <figure class="card">
+        <card class="card">
           <h2 class="card-title">Project</h2>
-          <card>
-          <a href="./assets/images/hammock.jpeg">
-          <img class="port-images"  src="./assets/images/hammock.jpeg" alt="woven hammock between two trees at sunset"> </img>
-          </a>
+          
+          <img class="port-images"  src={workDay} alt="workday scheduler"/>
+         
           </card>
-        </figure>
-      </section>
-      <section id="contact-me" class="contact-card">
-        <h4 class="bio-title">Sasha Doval:</h4>
-        <p>Phone: (555) 555-5555 &nbsp&nbsp&nbsp Email: sashardoval@gmail.com &nbsp&nbsp&nbsp
-        <a href="https://www.linkedin.com/in/sasha-doval-3950921b7/"> LinkedIn</a>&nbsp&nbsp&nbsp
-        <a href="https://github.com/sdoval27">GitHub</a>
-      </p>
-      </section>
+      
+
+        {/* project 6 */}
+        <card class="card">
+          <h2 class="card-title">Project</h2>
+       
+          
+          <img class="port-images"  src={readmeGen} alt="README generator"/>
+          
+          </card>
+      
+  
+      
    </div>
   );
 }
