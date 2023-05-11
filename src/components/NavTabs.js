@@ -2,6 +2,15 @@ import React from 'react';
 
 // Here we are using object destructuring assignment to pluck off our variables from the props object
 // We assign them to their own variable names
+
+//styles for moving tabs to right side
+const styles = {
+  menu: {
+    justifyContent: 'flex-end',
+    textAlign: 'right',
+  },
+};
+
 function NavTabs({ currentPage, handlePageChange }) {
   return (
      <ul className="nav nav-tabs">
