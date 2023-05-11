@@ -14,7 +14,7 @@ function FooterComponent() {
         <a href="https://twitter.com/sashaisapickle"   target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faTwitter} size="2x"  style={{color: "#de5935",}}/>
         </a>
-        <a href="https://www.linkedin.com/sasha-doval-3950921b7/"  target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/sasha-doval-3950921b7/"  target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faLinkedin} size="2x " style={{color: "#de5935",}} />
         </a>
       </div>
