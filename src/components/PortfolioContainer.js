@@ -2,10 +2,14 @@ import React, { useState } from 'react';
 import NavTabs from './NavTabs';
 import Footer from './Footer';
 
+//pages
 import About from './pages/About';
 import Portfolio from './pages/Portfolio';
 import Resume from './pages/Resume';
 import Contact from './pages/Contact';
+
+//styling
+import '../styles/Container.css';
 
 
 const styles = {
