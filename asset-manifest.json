@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/react-portfolio/static/css/main.0b200270.css",
+    "main.js": "/react-portfolio/static/js/main.28a00551.js",
+    "static/media/sasha-profile.jpg": "/react-portfolio/static/media/sasha-profile.6617b0f0e2fb3331d522.jpg",
+    "static/media/good-greens-port.png": "/react-portfolio/static/media/good-greens-port.5507d1e1021d952385b1.png",
+    "static/media/mansion.png": "/react-portfolio/static/media/mansion.8bcf9b1b74c891a4700d.png",
+    "static/media/WDS-home.png": "/react-portfolio/static/media/WDS-home.9a26a5a96ec0cb195fb3.png",
+    "static/media/JATE-app.png": "/react-portfolio/static/media/JATE-app.4263a87d959ebd5b5d22.png",
+    "static/media/password_gen_plain.png": "/react-portfolio/static/media/password_gen_plain.56cc931ecf286efdb2eb.png",
+    "static/media/readme-gen.png": "/react-portfolio/static/media/readme-gen.e4183fe030c95629ec56.png",
+    "index.html": "/react-portfolio/index.html",
+    "main.0b200270.css.map": "/react-portfolio/static/css/main.0b200270.css.map",
+    "main.28a00551.js.map": "/react-portfolio/static/js/main.28a00551.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0b200270.css",
+    "static/js/main.28a00551.js"
+  ]
+}
