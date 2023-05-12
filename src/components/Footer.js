@@ -9,13 +9,13 @@ function FooterComponent() {
     <footer className="footer" class="Footer" position="fixed">
       <div className="icons social-icon">
         <a href="https://github.com/sdoval27" target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon icon={faGithub} size="2x" style={{color: "#de5935",}}/>
+          <FontAwesomeIcon icon={faGithub} size="2x" style={{color: "white",}}/>
         </a>
         <a href="https://twitter.com/sashaisapickle"   target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon icon={faTwitter} size="2x"  style={{color: "#de5935",}}/>
+          <FontAwesomeIcon icon={faTwitter} size="2x"  style={{color: "white",}}/>
         </a>
         <a href="https://www.linkedin.com/in/sasha-doval-3950921b7/"  target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon icon={faLinkedin} size="2x " style={{color: "#de5935",}} />
+          <FontAwesomeIcon icon={faLinkedin} size="2x " style={{color: "white",}} />
         </a>
       </div>
     </footer>

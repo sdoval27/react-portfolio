@@ -5,6 +5,12 @@ const styles = {
   contactStyle: {
     background: "#489D7C",
   },
+  button: {
+    backgroundColor: 'white',
+    color:'#489D7C',
+    border: 'none',
+    borderRadius: '15px'
+  }
 }
 
 export default function Contact() {
@@ -69,10 +75,11 @@ export default function Contact() {
   };
 
   return (
-    <div style={styles.contactStyle} className = "Contact">
-      <h1>Contact Page</h1>
+    <div style={styles.contactStyle}>
+      <h1 className='form'>Contact Page</h1>
       <form className="form">
-      <input
+      <input 
+          className="form input"
           value={name}
           name="name"
           onChange={handleInputChange}
@@ -80,6 +87,7 @@ export default function Contact() {
           placeholder="name"
         />
         <input
+          className="form input"
           value={email}
           name="email"
           onChange={handleInputChange}
@@ -87,14 +95,16 @@ export default function Contact() {
           placeholder="email"
         />
         <input
+          className="form input"
           value={message}
           name="message"
           onChange={handleInputChange}
           type="text"
           placeholder="message"
+          style={{ width: '500px' }}
         />
         
-        <button type="button" onClick={handleFormSubmit}>Submit</button>
+        <button type="button" className="form input" style={styles.button} onClick={handleFormSubmit}>Submit</button>
       </form>
       {errorMessage && (
         <div>
